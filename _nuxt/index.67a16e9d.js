@@ -1,0 +1,1 @@
+import{a as o,b as t,o as n,e,f as c}from"./entry.067b8f82.js";const r={},s=e("h1",null,[c("¡Sorry, portfolio under construction! "),e("span",null,"🚧")],-1),a=[s];function _(l,d){return n(),t("div",null,a)}const f=o(r,[["render",_]]);export{f as default};

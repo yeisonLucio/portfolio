@@ -1,1 +1,0 @@
-import{a as e,b as o,o as t,e as n}from"./entry.b3ea0b3b.js";const c={},s=n("h1",null,"portfolio building...",-1),r=[s];function a(_,i){return t(),o("div",null,r)}const d=e(c,[["render",a]]);export{d as default};
