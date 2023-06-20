@@ -1,4 +1,21 @@
 <script setup>
+const goLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/yeisonlucio1266/", "_blank");
+};
+
+const downloadCV = () => {
+    let url = '/pdf/yeison-lucio-cv.pdf';
+
+    let link = document.createElement('a');
+    link.href = url;
+    link.download = 'yeison-lucio-cv.pdf';
+    link.style.display = 'none';
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+};
 </script>
 <template>
     <div>
@@ -14,15 +31,17 @@
                                 <h3 class="text-h2">¡Hola! soy</h3>
                                 <h1 class="text-h1">
                                     <span class="text-red">&lt;</span>
-                                    Yesion Lucio
+                                    Yeison Lucio
                                     <span class="text-red">/&gt;</span>
                                 </h1>
                                 <h2 class="text-h3 text-grey">> Software Engineer</h2>
                                 <div class="mt-4">
-                                    <v-btn color='teal' prepend-icon="mdi-email" :rounded="true">
-                                        Contactar
+                                    <v-btn @click="goLinkedIn()" color="blue-darken-2" prepend-icon="fa-brands fa-linkedin"
+                                        :rounded="true">
+                                        LinkedIn
                                     </v-btn>
-                                    <v-btn color='blue' class="ml-5" prepend-icon="mdi-download" :rounded="true">
+                                    <v-btn @click="downloadCV()" color="teal" class="ml-5"
+                                        prepend-icon="fa-solid fa-file-arrow-down" :rounded="true">
                                         Descargar CV
                                     </v-btn>
                                 </div>
@@ -40,11 +59,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: bottom;
-
 }
 
 #blur-container {
     backdrop-filter: blur(4px);
 }
-
 </style>

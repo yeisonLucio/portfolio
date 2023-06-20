@@ -1,8 +1,22 @@
-<script setup></script>
+<script setup>
+const skills = ref([
+    {name: "Golang", img: "/img/skills/golang.png"},
+    {name: "Laravel", img: "/img/skills/laravel.png"},
+    {name: "Node.js", img: "/img/skills/nodejs.png"},
+    {name: "Vue.js", img: "/img/skills/vuejs.png"},
+    {name: "AWS Lambda", img: "/img/skills/aws-lambda.png"},
+    {name: "AWS SQS", img: "/img/skills/aws-sqs.png"},
+    {name: "AWS DynamoDB", img: "/img/skills/aws-dynamodb.png"},
+    {name: "MySQL", img: "/img/skills/mysql.png"},
+    {name: "Serverless Framework", img: "/img/skills/serverless.png"},
+    {name: "Docker", img: "/img/skills/docker.png"},
+])
+    
+</script>
 <template>
-    <v-row>
+    <v-row class="text-white mt-4">
         <v-col cols="6">
-            <article class="text-white text-justify text-subtitle-1" id="profile">
+            <article class="text-justify text-subtitle-1" id="profile">
                 <p class="mb-3">
                     Desarrollador backend con experiencia en el desarrollo de microservicios utilizando Golang y
                     Laravel. He trabajado con servicios de AWS y he utilizado Pulumi para generar infraestructura. También
@@ -28,16 +42,50 @@
             </article>
         </v-col>
         <v-col cols="6">
+            <v-row>
+                <v-col>
+                    <div class="d-flex align-center justify-center">
+                        <h2 class="text-h4">Habilidades</h2>
+                    </div>
+                </v-col>
+            </v-row>
+            <v-row class="mt-10">
+                <v-col class="d-flex align-center justify-center">
+                    <v-sheet class="mx-auto bg-transparent" max-width="900">
+                    <v-slide-group show-arrows>
+                        <template #next>
+                            <v-icon size="70">fas fa-chevron-right</v-icon>
+                        </template>
+                        <template #prev>
+                            <v-icon size="70">fas fa-chevron-left</v-icon>
+                        </template>
+                        <v-slide-group-item v-for="skill in skills" :key="n">
+                            <div class="d-flex align-center justify-center flex-column">
 
+                            <v-avatar size="250px" class="mr-4 pa-3" >
+                                <v-img :src="skill.img" :alt="skill.name"></v-img>
+                            </v-avatar>
+                            <h6 class="text-subtitle-1">{{ skill.name }}</h6>
+                            </div>
+                                
+                        </v-slide-group-item>
+                    </v-slide-group>
+                </v-sheet>
+                </v-col>
+                
+            </v-row>
         </v-col>
     </v-row>
 </template>
 
 <style>
-#profile{
-    background-color: rgba(182, 217, 251, 0.2);;
+#profile {
+    background-color: rgba(182, 217, 251, 0.2);
+    ;
     padding: 2rem;
     border-radius: 5px;
 }
-
+.icon-size >>> .v-slide-group__next-icon {
+  font-size: 30px; /* Ajusta el tamaño del ícono a 30px o el tamaño deseado */
+}
 </style>
