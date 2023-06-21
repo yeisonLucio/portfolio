@@ -1,1 +1,0 @@
-import{al as t,a8 as a,am as n,o}from"./entry.44b287ca.js";const _={},s={id:"container"};function c(e,r){return o(),a("div",s,[n(e.$slots,"default")])}const d=t(_,[["render",c]]);export{d as default};
