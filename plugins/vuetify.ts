@@ -8,7 +8,7 @@ import { mdi } from 'vuetify/iconsets/mdi'
 
 export default defineNuxtPlugin((nuxtApp) => {
     const vuetify = createVuetify({
-        ssr: true,
+        ssr: false,
         icons: {
           defaultSet: 'fa',
           aliases,
